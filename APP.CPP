@@ -4,29 +4,6 @@
 #include <conio.h>
 using namespace std;
 #include "gotoxyy.h"
-void pressKey(int code, int *mon, int *year)
-{
-   if (code == 77)
-   {
-      *mon==12 ?(*mon = 1),(*year += 1) : *mon += 1;
-   }
-   else if (code == 75)
-   {
-      *mon == 1 ?(*mon = 12),(*year -= 1):*mon -= 1;
-   }
-   else if (code == 72)
-   {
-      *year += 1;
-   }
-   else if (code == 80)
-   {
-      *year -= 1;
-   }
-   else if(code==27)
-     exit(1);
-   else
-      cout<<"INVALID KEY";
-}
 long int limitcount(int baseYear, int year, int mon)
 {
    long int limcount = 0;
@@ -156,12 +133,5 @@ main()
    cin >> mon;
    cout << "\nENTER YEAR STARTING FROM 2001: ";
    cin >> year;
-   system("cls");
-   cout << "\nU CAN CHANGE THIS CALENDAR ACCORDING TO UR CHOICE";
-   cout << "\nPRESS RIGHT ARROW KEY FOR ONE MONTH BACk";
-   cout << "\nPRESS LEFT ARROW KEY FOR ONE MONTH FORWARD";
-   cout << "\nPRESS UP ARROW KEY FOR ONE  YEAR BACK";
-   cout << "\nPRESS DOWN ARROW KEY FOR ONE YEAR FORWARD";
-   cout<<  "\nPRESS ESCAPRE KEY FOR EXIT";
-   printMonths(mon, year, baseYear);
+   
 }
