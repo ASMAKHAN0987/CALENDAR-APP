@@ -164,5 +164,4 @@ main()
    cout << "\nPRESS DOWN ARROW KEY FOR ONE YEAR FORWARD";
    cout<<  "\nPRESS ESCAPRE KEY FOR EXIT";
    printMonths(mon, year, baseYear);
-   
 }
